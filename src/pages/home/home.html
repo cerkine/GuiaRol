@@ -5,13 +5,28 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+ <h1>Platform: </h1>
+ <p *ngIf="platformAndroid">Android</p>
+ <p *ngIf="platformIos">iOS</p>
+ <p *ngIf="platformDesktop">Desktop</p>
+ <button ion-button  icon-start color="primary" *ngIf="platformAndroid" large round block (click)="openLink('https://docs.google.com/document/d/1LBRrqDXtEJqiebHi5T_5UQ5K8kQNjE-PKGsmPaiLRUI/edit?usp=sharing')">
+   <ion-icon name="logo-android"></ion-icon>
+   Android
+ </button>
+ <button ion-button  icon-start color="primary" *ngIf="platformIos" large round block (click)="openLink('https://docs.google.com/document/d/1LBRrqDXtEJqiebHi5T_5UQ5K8kQNjE-PKGsmPaiLRUI/edit?usp=sharing')">
+   <ion-icon name="logo-apple"></ion-icon>
+   iOS
+ </button>
+ <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(() => console.log('service worker installed'))
+      .catch(err => console.error('Error', err));
+  }
+</script>
+
+ <button ion-button  icon-start color="primary" [disabled]="platformDesktop" large round block (click)="openLink('https://docs.google.com/document/d/1LBRrqDXtEJqiebHi5T_5UQ5K8kQNjE-PKGsmPaiLRUI/edit?usp=sharing')">
+   <ion-icon name="browsers"></ion-icon>
+   PWA
+ </button>
 </ion-content>

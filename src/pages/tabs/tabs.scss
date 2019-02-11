@@ -1,0 +1,11 @@
+.tabs-md .tabbar {
+    background: rgb(240, 238, 233);
+}
+// all tabs texts
+.tabs-md .tab-button-text {
+	font-size: 14px;
+}
+// selected tab
+.tabs-md .tab-button[aria-selected=true] {
+	background-color: #fff;	
+}
