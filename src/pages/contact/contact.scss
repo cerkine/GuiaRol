@@ -2,11 +2,23 @@ page-contact {
 
 }
 
-#texto{
-    padding-right: 400px;
-    padding-left: 400px;
+.texto{
+    padding-right: 10%;
+    padding-left: 10%;
+    font-size: 1.5rem;
 }
 
-#titulos{
+.titulos{
+    font-size: 2.3rem;
     text-align: center;
 }
+.foto{
+    width: 100px;
+    height: 100px;
+}
+img{
+    height: 70vh;
+    width: auto;
+    margin: auto;
+    display: block;
+  }
