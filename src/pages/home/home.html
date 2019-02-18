@@ -8,11 +8,11 @@
 
  <ion-footer>
    <p class="texto">ENTRA EN EL MUNDO DE ROL, GUARDA TU PERSONAJE!</p>
- <button ion-button  icon-start color="primary" *ngIf="platformAndroid" large round block (click)="openLink('https://docs.google.com/document/d/1LBRrqDXtEJqiebHi5T_5UQ5K8kQNjE-PKGsmPaiLRUI/edit?usp=sharing')">
+ <button ion-button  icon-start color="primary" *ngIf="platformAndroid" large round block (click)="openLink('https://drive.google.com/file/d/1VWsmD4IHmtYKuZC4YZ-1l6e4EIIDJZsY/view?usp=sharing')">
    <ion-icon name="logo-android"></ion-icon>
    Android
  </button>
- <button ion-button  icon-start color="primary" *ngIf="platformIos" large round block (click)="openLink('https://docs.google.com/document/d/1LBRrqDXtEJqiebHi5T_5UQ5K8kQNjE-PKGsmPaiLRUI/edit?usp=sharing')">
+ <button ion-button  icon-start color="primary" *ngIf="platformIos" large round block (click)="opentoast()">
    <ion-icon name="logo-apple"></ion-icon>
    iOS
  </button>
@@ -24,7 +24,7 @@
   }
 </script>
 
- <button ion-button  icon-start color="primary" [disabled]="platformDesktop" large round block (click)="openLink('https://docs.google.com/document/d/1LBRrqDXtEJqiebHi5T_5UQ5K8kQNjE-PKGsmPaiLRUI/edit?usp=sharing')">
+ <button ion-button  icon-start color="primary" [disabled]="platformDesktop" large round block (click)="openLink('https://guiarol-50ef7.firebaseapp.com/')">
    <ion-icon name="browsers"></ion-icon>
    PWA
  </button>

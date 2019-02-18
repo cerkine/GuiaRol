@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, Platform, ModalController } from 'ionic-angular';
+import { NavController, Platform, ModalController, ToastController } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 @Component({
@@ -12,7 +12,7 @@ export class HomePage {
   platformIos: boolean;
   platformDesktop: boolean;
  
-  constructor(public navCtrl: NavController, public iab: InAppBrowser, public platform: Platform) {
+  constructor(public navCtrl: NavController, public iab: InAppBrowser, public platform: Platform, public toastCtrl: ToastController) {
    
     this.platformAndroid = platform.is('android');
     this.platformIos = platform.is('ios');
@@ -23,6 +23,16 @@ export class HomePage {
     this.iab.create(url, '_system');
   }
 
+  opentoast(){
+
+    const toast = this.toastCtrl.create({
+      message: 'No hay apk para ios.',
+      showCloseButton: true,
+      closeButtonText: 'Ok'
+    });
+    toast.present();
+  }
+ 
  
  
  
