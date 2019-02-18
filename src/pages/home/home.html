@@ -1,14 +1,13 @@
 <ion-header>
   <ion-navbar  color="primary">
-    <ion-title>Home</ion-title>
+    <ion-title>Inicio</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
- <h1>Platform: </h1>
- <p *ngIf="platformAndroid">Android</p>
- <p *ngIf="platformIos">iOS</p>
- <p *ngIf="platformDesktop">Desktop</p>
+<ion-content padding class="fondo">
+
+ <ion-footer>
+   <p class="texto">ENTRA EN EL MUNDO DE ROL, GUARDA TU PERSONAJE!</p>
  <button ion-button  icon-start color="primary" *ngIf="platformAndroid" large round block (click)="openLink('https://docs.google.com/document/d/1LBRrqDXtEJqiebHi5T_5UQ5K8kQNjE-PKGsmPaiLRUI/edit?usp=sharing')">
    <ion-icon name="logo-android"></ion-icon>
    Android
@@ -29,4 +28,5 @@
    <ion-icon name="browsers"></ion-icon>
    PWA
  </button>
+</ion-footer>
 </ion-content>

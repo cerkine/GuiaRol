@@ -1,12 +1,12 @@
 <ion-header>
   <ion-navbar  color="primary">
     <ion-title>
-      About
+      Guia Rápida
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding >
 
     <h1 class="titulos"> RolApp</h1>
     <br/>
@@ -16,10 +16,13 @@
      </p>
      <br>
      <br>
+     <a (click)="scrollTo('login')">Login</a><br>
+     <a (click)="scrollTo('pj')">Creación de Personaje</a><br>
+     <a (click)="scrollTo('pjyut')">Personaje y Utilidades</a>
      <br>
    </div>
 
-   <h3 class="titulos"> Login </h3>
+   <h3 id="login" class="titulos"> Login </h3>
    <div class="texto">
    <p>
      El sistema de login de RolApp funciona gracias a Firebase, una plataforma gratuita de Google. Solo esta habilitado el servicio de gmail, es decir podemos registrarnos con 
@@ -41,7 +44,7 @@
    <br>
    <br>
   </div>
-  <h3 class="titulos"> Creacion de Personaje/Partida </h3>
+  <h3 id="pj" class="titulos"> Creacion de Personaje/Partida </h3>
    <div class="texto">
    <p>
      Cuando hayamos pasado la pantalla de login, la siguiente sera la pantalla de elección de personaje o creación de uno nuevo.
@@ -67,24 +70,37 @@
    <br>
    <br>
   </div>
-  <h3 class="titulos"> Personaje y utilidades </h3>
+  <h3 id="pjyut" class="titulos"> Personaje y utilidades </h3>
    <div class="texto">
    <p>
      Ahora entramos en la base de la aplicación. Són tres pestañas claras. La primera es sobre los stats del personaje y la posibilidad de cambiarlos haciando un tap largo 
      en el atributo que se desee cambiar. 
    </p>
-   <img src="../../assets/imgs/stats.jpeg" alt="">
-   <img src="../../assets/imgs/statunico.jpeg">
+   <ion-grid id="grid">
+    <ion-row justify-content-around>
+        <ion-col col-12 col-sm-6><img id="imgIni" src="../../assets/imgs/stats.jpeg" alt="tiempo"/></ion-col>
+
+      <ion-col col-12 col-sm-6><img id="imgIni" src="../../assets/imgs/statunico.jpeg" alt="imagen inicio"/></ion-col>
+    </ion-row>
+  </ion-grid>
    <p>
     En la segunda pestaña aparecen los datos del personaje y la posibilidad de marcar la subida de nivel.
    </p>
-   <img src="../../assets/imgs/personaje.jpeg">
-   <img src="../../assets/imgs/personajeLVL.jpeg">
-    
+   <ion-grid id="grid">
+    <ion-row justify-content-around>
+        <ion-col col-12 col-sm-6><img id="imgIni" src="../../assets/imgs/personaje.jpeg" alt="tiempo"/></ion-col>
+
+      <ion-col col-12 col-sm-6><img id="imgIni" src="../../assets/imgs/personajeLVL.jpeg" alt="imagen inicio"/></ion-col>
+    </ion-row>
+  </ion-grid>
    <p>La última pestaña nos permite enviar mensajes o llevar un diario sobre nuestra partida de rol.</p>
-   <img src="../../assets/imgs/buzon.jpeg">
-   <img src="../../assets/imgs/mensaje.jpeg">
-   
+   <ion-grid id="grid">
+    <ion-row justify-content-around>
+        <ion-col col-12 col-sm-6><img id="imgIni" src="../../assets/imgs/mensaje.jpeg" alt="tiempo"/></ion-col>
+
+      <ion-col col-12 col-sm-6><img id="imgIni" src="../../assets/imgs/buzon.jpeg" alt="imagen inicio"/></ion-col>
+    </ion-row>
+  </ion-grid>
    <br>
    <br>
    <br>

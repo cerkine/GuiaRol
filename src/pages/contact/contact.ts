@@ -11,7 +11,7 @@ export class ContactPage {
  @ViewChild(Content) content: Content;
 
  public altura:string;
- public items = ["1.Introducción","2.Descripción","3.Público objetivo","4.Cuenta","5.Funcionalidad de la app", "5.1.Ficha de personaje", "5.2.Mensaje"];
+ public items = ["1.Introducción","2.Descripción","3.Público objetivo","4.Cuenta","5.Funcionalidad de la app", "5.1.Ficha de personaje", "5.2.Mensaje","6.Instalación"];
 
  constructor(public modalCtrl: ModalController) {  }
  
